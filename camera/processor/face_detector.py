@@ -42,6 +42,7 @@ class FaceDetector(object):
             cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
 
         # 顔の数を出力
+        font = cv2.FONT_HERSHEY_SIMPLEX
         cv2.putText(frame,'face:'+str(len(faces)), (10,500), font, 4,(255,255,255),2,cv2.LINE_AA)
 
         # frameを戻り値として返す
